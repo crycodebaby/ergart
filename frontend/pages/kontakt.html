@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' https://www.google.com https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://example.com;">
+
+    <title>Kontakt - Alexander Ergart</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/kontakt.css">
+    <script src="../js/main.js" defer></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+
+    <!-- Kontaktleiste -->
+    <div id="kontaktleiste">
+        <span><a href="https://www.tiktok.com" target="_blank">TikTok-Kanal</a></span>
+        <span>Email: <a href="mailto:alex.ergart@example.com">alex.ergart@example.com</a></span>
+        <span>Telefon: <a href="tel:+491234567890">+49 123 456 7890</a></span>
+    </div>
+
+    <!-- Header -->
+    <header id="header-section">
+        <div id="header-content">
+            <div id="logo-container">
+                <img src="../images/logo.png" alt="Logo von Alexander Ergart" id="header-logo">
+            </div>
+            <div id="header-text">
+                <div id="text-upper">Alexander</div>
+                <div id="text-main">Ergart</div>
+                <div id="text-slogan">Zuverlässiger Hausmeister in Neuss</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hamburger Menü -->
+    <div id="hamburger-menu-container">
+        <div id="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav id="dropdown-menu">
+            <ul>
+                <li><a href="index.html">Startseite</a></li>
+                <li><a href="leistungen.html">Leistungen</a></li>
+                <li><a href="referenzen.html">Referenzen</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Kontaktbereich -->
+    <main id="kontakt-main">
+        <section id="kontakt-intro">
+            <h1>Kontaktieren Sie uns</h1>
+            <p>Wir sind für Sie da – zuverlässig und kompetent. Nutzen Sie die Kontaktmöglichkeiten unten oder das Formular, um mit uns in Verbindung zu treten.</p>
+        </section>
+
+        <section id="kontakt-info">
+            <div class="info-box">
+                <h2>Telefon</h2>
+                <p><a href="tel:+491234567890">+49 123 456 7890</a></p>
+            </div>
+            <div class="info-box">
+                <h2>E-Mail</h2>
+                <p><a href="mailto:alex.ergart@example.com">alex.ergart@example.com</a></p>
+            </div>
+            <div class="info-box">
+                <h2>Adresse</h2>
+                <p>Musterstraße 123<br>41460 Neuss</p>
+                <iframe src="https://www.google.com/maps/embed?..."></iframe>
+            </div>
+        </section>
+
+        <section id="kontaktformular">
+            <form action="/submit-form" method="POST" class="styled-form">
+                <div class="form-group">
+                    <label for="name">Ihr Name</label>
+                    <input type="text" id="name" name="name" placeholder="Ihr Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Ihre E-Mail-Adresse</label>
+                    <input type="email" id="email" name="email" placeholder="Ihre E-Mail-Adresse" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Ihre Telefonnummer (optional)</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Ihre Telefonnummer">
+                </div>
+                <div class="form-group">
+                    <label for="message">Ihre Nachricht</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Ihre Nachricht" required></textarea>
+                </div>
+                <div class="g-recaptcha" data-sitekey="DEIN_SITE_KEY"></div>
+                <button type="submit" id="submit-button">Nachricht senden</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Fußzeile -->
+    <footer id="modern-footer">
+        <div class="footer-content">
+            <div class="footer-section left">
+                <h3>Kontakt</h3>
+                <p>Email: <a href="mailto:alex.ergart@example.com">alex.ergart@example.com</a></p>
+                <p>Telefon: <a href="tel:+491234567890">+49 123 456 7890</a></p>
+            </div>
+            
+            <div class="footer-section logo">
+                <img src="../images/logo.png" alt="Logo von Alexander Ergart">
+            </div>
+            
+            <div class="footer-section right">
+                <h3>Öffnungszeiten</h3>
+                <p>Montag - Freitag: 9-18 Uhr</p>
+                <p>Samstag und Sonntag: Geschlossen</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Alexander Ergart | <a href="datenschutz.html">Datenschutz</a> | <a href="impressum.html">Impressum</a></p>
+        </div>
+    </footer>
+    
+
+</body>
+</html>

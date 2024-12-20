@@ -1,0 +1,72 @@
+/* Kontaktseite */
+#kontakt-main {
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+#kontakt-intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#kontakt-intro h1 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+#kontakt-intro p {
+    font-size: 1rem;
+    color: #666;
+}
+
+#kontakt-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.info-box {
+    flex: 1;
+    margin: 0 10px;
+    text-align: center;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+#kontaktformular {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.styled-form .form-group {
+    margin-bottom: 15px;
+}
+
+.styled-form input,
+.styled-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+#submit-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#submit-button:hover {
+    background-color: #0056b3;
+}

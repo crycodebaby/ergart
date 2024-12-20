@@ -1,0 +1,376 @@
+/* ======================================= */
+/* Global CSS - Einheitliches Erscheinungsbild für alle Seiten */
+/* ======================================= */
+
+/* Farbvariablen: Übersichtlich und einheitlich */
+:root {
+    --color-bg: #2e2e2e;                 /* Grundlegender Hintergrund */
+    --color-header-bg: #292929;          /* Hintergrundfarbe für Kopfbereich */
+    --color-footer-bg: #2a2a2a;          /* Hintergrundfarbe für Fußzeile */
+    --color-contactbar-bg: rgba(46,46,46,0.9); /* Hintergrund für die Kontaktleiste */
+    --color-white: #ffffff;              /* Standard Weiß */
+    --color-gray-text: #d9d9d9;          /* Dezenter Grauton für Fließtexte */
+    --color-highlight: #85d7ff;          /* Helles Blau für Hervorhebungen */
+    --color-primary-gray-light: #3a3a3a; /* Leichtes Grau für Eingabefelder */
+    --color-primary-gray-medium: #4a4a4a;/* Mittleres Grau bei Hover/Focus */
+}
+
+/* Grundlegende Einstellungen */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif; /* Haupt-Font */
+    background: var(--color-bg);
+    color: var(--color-gray-text);
+    scroll-behavior: smooth;
+    overflow-x: hidden; /* Verhindert horizontales Scrollen */
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif; /* Überschriften abweichend, für mehr Kontrast */
+    font-weight: bold;
+    color: var(--color-highlight);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    margin-bottom: 15px;
+}
+
+a {
+    color: var(--color-white);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/*==================================*/
+/*Kontaktleiste */
+/*===========================*/
+#kontaktleiste {
+    background: var(--color-contactbar-bg);
+    color: var(--color-white);
+    padding: 10px 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+#kontaktleiste span {
+    margin: 0 15px;
+}
+
+/*==================================*/
+/*Headerbereich(logo, name, slogan)*/
+/*===========================*/
+#header-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-header-bg);
+    padding: 30px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+#header-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 90%;
+    max-width: 1200px;
+    gap: 40px;
+}
+
+#logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header-logo {
+    width: 160px;
+    height: auto;
+    display: block;
+}
+
+#header-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    gap: 5px;
+}
+
+#text-upper {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #aaa; /* dezentes Hellgrau für kleinen Eyecatcher */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#text-main {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--color-white);
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+#text-slogan {
+    font-size: 1.2rem;
+    color: #ddd;
+    margin-top: 5px;
+    white-space: nowrap; /* Verhindert Zeilenumbrüche */
+}
+
+/* Responsive Header-Anpassungen */
+@media (max-width: 768px) {
+    #header-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    #header-logo {
+        width: 100px;
+    }
+
+    #text-main {
+        font-size: 2.5rem;
+    }
+
+    #text-slogan {
+        font-size: 1rem;
+    }
+}
+
+/*==================================*/
+/*Hamburger Menu & Dropdown*/
+/*===========================*/
+/* Hamburger-Menü Container */
+#hamburger-menu-container {
+    position: relative;
+    z-index: 1000;
+}
+
+/* Menü-Icon */
+#menu-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 40px;
+    height: 30px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1010;
+    transition: transform 0.4s ease;
+}
+
+/* Striche des Menüs */
+#menu-icon span {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: var(--color-white, #fff);
+    border-radius: 2px;
+    transition: all 0.6s ease;
+    transform-origin: left;
+}
+
+/* Aktivierte Animation - Buchstabe "E" */
+#menu-icon.active span:nth-child(1) {
+    transform: translateY(10px) rotate(0deg);
+    width: 100%;
+    background: var(--color-highlight, #007bff);
+}
+
+#menu-icon.active span:nth-child(2) {
+    transform: translateY(-6px) scaleX(0.9);
+    width: 80%;
+    background: var(--color-highlight, #007bff);
+}
+
+#menu-icon.active span:nth-child(3) {
+    transform: translateY(-22px);
+    width: 100%;
+    background: var(--color-highlight, #007bff);
+}
+
+/* Zurück zur ursprünglichen Form */
+#menu-icon span {
+    transition: all 0.6s ease;
+}
+
+/* Hover-Effekt */
+#menu-icon:hover span {
+    background: var(--color-highlight, #007bff);
+}
+
+/* Dropdown-Menü */
+#dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 200px;
+    background: var(--color-background, #333);
+    color: var(--color-white, #fff);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    z-index: 999;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#dropdown-menu.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#dropdown-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+}
+
+#dropdown-menu ul li {
+    padding: 10px;
+}
+
+#dropdown-menu ul li a {
+    color: var(--color-white, #fff);
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+   
+
+
+
+
+
+
+
+
+/*==================================*/
+/*Scroll-Triangle*/
+/*===========================*/
+#scroll-triangle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #333;
+    color: var(--color-white);
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#scroll-triangle:hover {
+    background-color: #555;
+    transform: scale(1.1);
+}
+
+#scroll-triangle.visible {
+    opacity: 1;
+}
+
+/*==================================*/
+/*Footer-Fußzeile*/
+/*===========================*/
+/* Allgemeine Fußzeile */
+#modern-footer {
+    background-color: #1b1b1b;
+    color: #f4f4f4;
+    padding: 50px 20px;
+    text-align: center;
+    position: relative;
+}
+
+#modern-footer .footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-section h3 {
+    color: #85d7ff; /* Akzentfarbe */
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.footer-section p {
+    margin: 5px 0;
+    color: #cccccc;
+}
+
+.footer-section p a {
+    color: #85d7ff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section p a:hover {
+    color: #ffffff;
+}
+
+.footer-section.logo img {
+    max-width: 120px;
+    height: auto;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.footer-section.logo img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+/* Interaktive Funktionen */
+.footer-bottom {
+    margin-top: 30px;
+    padding-top: 10px;
+    border-top: 1px solid #333;
+    font-size: 0.9rem;
+}
+
+.footer-bottom a {
+    color: #85d7ff;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.footer-bottom a:hover {
+    color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-section {
+        padding: 10px 0;
+    }
+
+    .footer-section.logo img {
+        max-width: 100px;
+    }
+}
+}

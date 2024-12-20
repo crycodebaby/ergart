@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' https://www.google.com https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://example.com;">
+  
+        <title>Alexander Ergart - Startseite</title>
+        <!-- Globale und seiten-spezifische Styles -->
+        <link rel="stylesheet" href="../css/global.css">
+        <link rel="stylesheet" href="../css/index.css">
+        <!-- Schriftarten -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+            rel="stylesheet">
+        <!-- reCaptcha (falls benötigt) -->
+        <script src="https://www.google.com/recaptcha/api.js" async
+            defer></script>
+    </head>
+    <body>
+
+                <!-- JavaScript: Grundfunktionen und Bild-Slider -->
+                <script src="../js/main.js" defer></script>
+                <script src="../js/image-slider.js" defer></script>
+
+        <!-- Kontaktleiste -->
+        <div id="kontaktleiste">
+            <span><a href="https://www.tiktok.com"
+                    target="https://www.tiktok.com/@alexanderergart">TikTok-Kanal</a></span>
+            <span>Email: <a
+                    href="mailto:alex.ergart@example.com">alex.ergart@example.com</a></span>
+            <span>Telefon: <a href="tel:+491234567890">+49 123 456
+                    7890</a></span>
+        </div>
+
+        <!-- Header -->
+        <header id="header-section">
+            <div id="header-content">
+                <div id="logo-container">
+                    <img src="../images/logo.png"
+                        alt="Logo von Alexander Ergart" id="header-logo">
+                </div>
+                <div id="header-text">
+                    <div id="text-upper">Alexander</div>
+                    <div id="text-main">Ergart</div>
+                    <div id="text-slogan">Zuverlässiger Hausmeister in
+                        Neuss</div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hamburger Menü -->
+        <div id="hamburger-menu-container">
+            <div id="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav id="dropdown-menu">
+                <ul>
+                    <li><a href="index.html">Startseite</a></li>
+                    <li><a href="leistungen.html">Leistungen</a></li>
+                    <li><a href="referenzen.html">Referenzen</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        
+
+        <!-- Startbild-Slider -->
+        <section id="startbild-container">
+            <div class="startbild-frame">
+                <img src="../images/startbild1.jpg" alt="Modernes Büro" class="startbild active">
+                <img src="../images/startbild2.jpg" alt="Zusammenarbeit im Team" class="startbild">
+                <img src="../images/startbild3.jpg" alt="Technologie und Innovation" class="startbild">
+            </div>
+        </section>
+
+
+        
+        
+        
+
+        <!-- Profil-Sektion -->
+        <section id="profil">
+            <div class="profil-card">
+                <div class="profil-image">
+                    <img src="../images/alexander_bild.jpg"
+                        alt="Alexander Ergart">
+                </div>
+                <div class="profil-info">
+                    <h2>Alexander Ergart</h2>
+                    <p>Gründer und Geschäftsführer des Hausmeisterservice
+                        Alexander Ergart.</p>
+                    <p>Seit 2018 bieten wir zuverlässige Dienstleistungen im
+                        Kreis Neuss an: Fensterdienstleistungen, Reinigung,
+                        Gartenpflege und Winterdienst.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Scroll-Dreieck -->
+        <div id="scroll-triangle" title="Zurück nach oben">▲</div>
+
+        <!-- Fußzeile -->
+        <footer id="modern-footer">
+            <div class="footer-content">
+                <div class="footer-section left">
+                    <h3>Kontakt</h3>
+                    <p>Email: <a href="mailto:alex.ergart@example.com">alex.ergart@example.com</a></p>
+                    <p>Telefon: <a href="tel:+491234567890">+49 123 456 7890</a></p>
+                </div>
+                
+                <div class="footer-section logo">
+                    <img src="../images/logo.png" alt="Logo von Alexander Ergart">
+                </div>
+                
+                <div class="footer-section right">
+                    <h3>Öffnungszeiten</h3>
+                    <p>Montag - Freitag: 9-18 Uhr</p>
+                    <p>Samstag und Sonntag: Geschlossen</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Alexander Ergart | <a href="datenschutz.html">Datenschutz</a> | <a href="impressum.html">Impressum</a></p>
+            </div>
+        </footer>
+        
+        
+        
+
+    </body>
+</html>

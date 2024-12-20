@@ -1,0 +1,350 @@
+/*============================*/
+/*Index Page Styles*/
+/*Header / h1 Überschrift*/
+/*===========================*/
+
+#header-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #292929; /* Dunkleres Grau */
+    padding: 30px 0; /* Mehr Platz für ein zentrales Design */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Flexbox Container für Logo und Text */
+#header-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 90%;
+    padding-left: 5rem;
+    max-width: 1200px;
+    gap: 40px; /* Abstand zwischen Logo und Textbereich */
+}
+
+/* Logo Styling */
+#logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header-logo {
+    width: 160px; 
+    height: auto;
+    max-width: 100%;
+    display: block;
+    background: transparent; /* Entfernt einen möglichen Hintergrund */
+    border: none; /* Entfernt eventuelle Ränder */
+    padding: 0; 
+    margin: 0; 
+}
+
+/* Textbereich Styling */
+#header-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    gap: 5px;
+}
+
+#text-upper {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #aaa; /* Helleres Grau */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#text-main {
+    font-size: 3rem; /* Größerer Firmenname */
+    font-weight: bold;
+    color: #f7f7f7; /* Weißer Text für Kontrast */
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+#text-slogan {
+    font-size: 1.2rem;
+    color: #ddd; /* Dezenter Grau-Ton */
+    margin-top: 5px;
+    white-space: nowrap;
+}
+
+/* Responsive Anpassung */
+@media (max-width: 768px) {
+    #header-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    #header-logo {
+        width: 100px; /* Kleinere Logos für Mobilgeräte */
+    }
+
+    #text-main {
+        font-size: 2.5rem;
+    }
+
+    #text-slogan {
+        font-size: 1rem;
+    }
+}
+
+/*==================================*/
+/*Kontaktleiste / Contact bar*/
+/*===========================*/
+#kontaktleiste {
+    background: rgba(46, 46, 46, 0.9);
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+#kontaktleiste span {
+    margin: 0 15px;
+}
+
+#kontaktleiste a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+#kontaktleiste a:hover {
+    text-decoration: underline;
+}
+
+
+/*==================================*/
+/*Startseite / startbild*/
+/*===========================*/
+/* Rahmen und Animationen für den Slider */
+/* Startbild-Container mit interaktivem Hintergrund */
+#startbild-container {
+    position: relative;
+    overflow: hidden;
+    padding: 50px 0;
+    background: linear-gradient(120deg, #2c2c2c, #464646); /* Farbverlauf */
+    background-size: 400% 400%;
+    animation: backgroundShift 15s infinite alternate ease-in-out; /* Animiertes Farbspiel */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#background-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#animated-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(135deg, #1b1b1d, #232325, #1d1d1f, #262628);
+    background-size: 400% 400%; /* Größerer Bereich für sanftere Bewegungen */
+    animation: smoothBackground 20s infinite linear;
+    z-index: -1; /* Hintergrund hinter den Inhalten */
+}
+
+/* Animation */
+@keyframes smoothBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/* Rahmen und Glow-Effekt */
+.startbild-frame {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    aspect-ratio: 16 / 9;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2), 0 0 40px rgba(0, 150, 255, 0.4);
+    transition: box-shadow 0.5s ease-in-out;
+    background: rgba(255, 255, 255, 0.1); /* Glas-Effekt */
+    backdrop-filter: blur(10px); /* Unschärfe für Glaseffekt */
+}
+
+/* Bilder */
+.startbild {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.startbild.active {
+    opacity: 1;
+    transform: scale(1.05); /* Subtiler Zoom */
+}
+
+/* Glow beim Hover */
+.startbild-frame:hover {
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.5), 0 0 60px rgba(138, 206, 255, 0.7);
+}
+
+/* Inhalt im Vordergrund */
+.content {
+    z-index: 1;
+    text-align: center;
+}
+
+.content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Leichtes Schattenspiel */
+}
+
+.content p {
+    font-size: 1.2rem;
+    color: #b0b0b3; /* Dezentes Grau */
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+
+
+
+/*==================================*/
+/*Profil Karte / Profile */
+/*===========================*/
+/* Profil-Bereich */
+#profil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    background: #353535;
+}
+
+/* Profilkarte */
+.profil-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: transparent;
+    padding: 8rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.8s ease, box-shadow 0.8s ease;
+    max-width: 800px;
+    width: 100%;
+    gap: 20px;
+}
+
+/* Hover-Effekt */
+.profil-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Profilbild */
+.profil-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Profilbild Hover */
+.profil-card:hover .profil-image img {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+/* Profil-Info */
+.profil-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #333333;
+}
+
+/* Titel */
+.profil-info h2 {
+    font-size: 1.8rem;
+    color: #4aa1ff;
+    margin-bottom: 10px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Beschreibung */
+.profil-info p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #f0f0f0;
+    margin: 0;
+}
+
+/* Responsive Anpassungen */
+@media (max-width: 768px) {
+    .profil-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .profil-info h2 {
+        font-size: 1.5rem;
+    }
+
+    .profil-info p {
+        font-size: 0.9rem;
+    }
+
+    .profil-card {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background: transparent;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.8s ease, box-shadow 0.8s ease;
+        max-width: 400px;
+        width: 80%;
+        gap: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

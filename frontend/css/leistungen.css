@@ -1,0 +1,34 @@
+/*============================*/
+/*Leistungen Page Styles*/
+/*========================*/
+.services-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 20px;
+    background-color: #222222;
+}
+
+.service-box {
+    flex: 1;
+    margin: 0 10px;
+    padding: 20px;
+    border: 1px solid #444;
+    border-radius: 8px;
+    background-color: #333;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.service-box h2 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.service-box p {
+    color: #ccc;
+}
